@@ -3,6 +3,7 @@ It simulates the trajectory of a point somewhere on a cycloid drawing machine. I
 
 
 
-*2 gears; one slidong link on a slot and a point on the smaller gear. Shape drawn on the larger gear
-*3 gears; one slidong link on a moving slot and a point on the smaller gear. shape drawing on the middle gear
+*2 gears; one sliding link on a slot and a point on the smaller gear. Shape drawn on the larger gear
+*3 gears; one sliding link on a moving slot and a point on the smaller gear. shape drawing on the middle gear
 *4 gears is yet to be started
+*added a file that plots simple geocentric orbits of planets, based on their time of revolution and orbit radius in AU.
