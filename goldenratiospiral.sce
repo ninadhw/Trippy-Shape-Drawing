@@ -6,11 +6,12 @@ figure;
 //plotting simple outward spirals of circles that are phid offset and phi ratio diameter increasing
 //initializing basic variables
 r_spiral = 1;
-r=0.8;
+r=1;
 theta=0;
-
+r(1)=r;
 for i=1:1:20
-    n=3; //number of sppirals
+    rsp=r_spiral;
+    n=5; //number of spirals
     for j=0:1:n-1
         xc=r_spiral*cosd(theta+ (j* (360/n)));
         yc=r_spiral*sind(theta+ (j* (360/n)));
@@ -25,6 +26,7 @@ for i=1:1:20
         plot(x, y);
     end
     theta=theta+phid;
-    r_spiral=r_spiral*1.1;
-    r=r*1.1;
+    r_spiral=r_spiral*phi;
+    r=r*phi;
+    //disp(r_spiral);
 end
