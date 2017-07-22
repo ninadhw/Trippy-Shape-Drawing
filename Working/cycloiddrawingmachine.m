@@ -12,8 +12,8 @@ figure;
 hold on;
 %%Driving gear
 %%teeth=50;
-Dt=75;
-Dr=75; %%times the module (value of Dr has to be less than half of the number of teeth)
+Dt=30;
+Dr=37; %%times the module (value of Dr has to be less than half of the number of teeth)
 if Dr> (0.5*Dt) 
     disp('Correcting the length of the arm...');
     Dr=Dr-(0.5*Dt);
@@ -38,11 +38,11 @@ dcentre=[0.5*(Mt+Dt)*m*cosd(angled) 0.5*(Mt+Dt)*m*sind(angled)];
 P=[-500  -300];
 
 %%Adjustable sliding link parameters
-l1=500;
-l2=300;
+l1=400;
+l2=200;
 %%This is the setup information. Based on this, we mark the innitial position of all the critical points and then using time marching, find the subsequent positions of all the critical
 i=0;
-for t=1:0.5:360
+for t=1:0.5:3600
     i=i+1;
     alpha=-t; %%angle of driving gear in degree
     omegad= 1 * (Mt/Dt);
@@ -63,13 +63,13 @@ plot (p,q)
 plot (x,y)
 
 %%circle plot trial
-for i=1:1:360
+for i=1:1:3600
     g1x(i)= (Mt*m*0.5) * cosd(i);
     g1y(i)= (Mt*m*0.5) * sind(i);
 end
 plot(g1x,g1y,'red-.')
 
-for i=1:1:360
+for i=1:1:3600
     g2x(i)= dcentre(1)+ (Dt*m*0.5) * cosd(i);
     g2y(i)= dcentre(2)+ (Dt*m*0.5) * sind(i);
 end
@@ -77,7 +77,7 @@ plot(g2x,g2y,'red-.')
 
 figure
 i=0;
-for t=1:0.5:360
+for t=1:0.5:3600
     i=i+1;
     alpha=-1*t;
     theta1 = atan2d(y(i),x(i));
