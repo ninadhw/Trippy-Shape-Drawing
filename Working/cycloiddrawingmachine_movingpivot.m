@@ -35,7 +35,7 @@ dcentre=[0.5*(Mt+Dt)*m*cosd(angled) 0.5*(Mt+Dt)*m*sind(angled)];
 %%floating point means it is mounted on an additional gear in the gear train
 %%Pivot point also has the pin for the sliding link
 %%number of teeth on the last gear with the moving pivot
-lastt=50;
+lastt=30;
 anglelast=-135;
 lastcentre=[0.5*(Mt+lastt)*m*cosd(anglelast) 0.5*(Mt+lastt)*m*sind(anglelast)];
 
