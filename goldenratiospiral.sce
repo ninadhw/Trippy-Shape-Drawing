@@ -30,7 +30,7 @@ for i=1:1:20
     end
     theta=theta+phid;
     r_spiral=2*sqrt(i);
-    //r_spiral=r_fibo_counter(i);
+    //r_spiral=r_fibo_counter(i);n
     r=sqrt(i);
     //disp(r);
 end
